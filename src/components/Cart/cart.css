@@ -15,3 +15,47 @@
 .Cart h2{
     margin: 0;
 }
+
+.Cart_div{
+    width: 30rem;
+    min-height: 50vh;
+    position: fixed;
+    top: 6rem;
+    right: 1rem;
+    background-color: white;
+    z-index: 7;
+    color: black;
+    border: 1px solid rgb(122, 122, 122);
+    border-radius: 15px;
+    padding: 1rem 20px;
+}
+.cart_header{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.cart_header button{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+   left: 10.3rem;
+   top: -9px;
+    border:none;
+}
+
+.bg_for_modal{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

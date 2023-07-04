@@ -1,9 +1,19 @@
 import Container from 'react-bootstrap/Container';
 import {Row,Col} from 'react-bootstrap';
 import Cart from '../Cart/Cart';
+import CartComponent from '../Cart/CartComponent';
+import { useState } from 'react';
 
 import "./Navigation.css"
 function Navigation() {
+
+  const [showCart,setshowCart] = useState(false);
+
+    function handleCart()
+   {
+      setshowCart(prev=>!prev);
+   }
+
   return (
     <>  
     <Container fluid bg={'black'} style={{color:"white"}} className={'bg-dark color-success  sticky-top'} >
@@ -19,13 +29,14 @@ function Navigation() {
         </Col>
         <Col className='d-flex align-items-center'>
         <Container>
-          <Cart />
+          <Cart onClick={handleCart} />
         </Container>
         </Col>
         </Row>
         </Container>
     <Container   fluid style={{color:"white",height:"200px" }} className={'bg-secondary text-center'} >
        <h1 className='generic_logo'>The Generics</h1>
+       {showCart && <CartComponent closeModal={handleCart}/>}
         </Container>
   
     </>
