@@ -1,0 +1,20 @@
+
+.Nav_UL{
+    display: flex;
+    justify-content: center;
+  
+}
+
+.Nav_UL li{
+  list-style: none;
+  margin: 0 20px;
+}
+.Nav_UL li a{
+   color: white; 
+  text-decoration: none;
+}
+.generic_logo{
+   font-size: 8rem;
+   position: relative;
+   right: 7rem;
+}
