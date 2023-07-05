@@ -26,7 +26,7 @@ function Navigation(props) {
           <Col md={10}>
         <Container className='fs-1'>
              <ul className='Nav_UL'>
-             <li><Link to="/Home" >Home </Link> </li>
+             <li> <Link to="/Home" >Home </Link> </li>
               <li> <Link to="/" >Store </Link> </li>
               <li> <Link to="/About" >About </Link> </li>
              </ul>

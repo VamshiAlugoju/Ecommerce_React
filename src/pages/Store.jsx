@@ -4,7 +4,7 @@ import Music from '../components/Music/Music'
 import CartProvider from '../Context/CartProvider'
  
 
-function Home(){
+function Store(){
  
   
   return (
@@ -15,4 +15,4 @@ function Home(){
   )
 }
 
-export default Home;
+export default Store;

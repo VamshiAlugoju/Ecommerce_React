@@ -1,10 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import {Row,Col} from 'react-bootstrap';
-import { useState,useContext } from 'react';
+
  import {Link} from "react-router-dom"
 
 import "./Navigation.css"
-function AboutNav(props) {
+function HomeNav(props) {
 
   return (
     <>  
@@ -12,7 +12,7 @@ function AboutNav(props) {
         <Row>
         <Container className='fs-1'>
              <ul className='Nav_UL'>
-              <li> <Link to="/Home" >Home </Link> </li>
+              <li><Link to="/Home" >Home </Link> </li>
               <li> <Link to="/" >Store </Link> </li>
               <li> <Link to="/About" >About </Link> </li>
              </ul>
@@ -27,4 +27,4 @@ function AboutNav(props) {
   );
 }
 
-export default AboutNav;
+export default HomeNav;
