@@ -1,7 +1,21 @@
 import React from 'react'
 import {Card , Button, Container} from "react-bootstrap"
+import CartContext from '../../Context/CartContext'
 
 function Album(props) {
+
+  const cartctx = React.useContext(CartContext);
+  function AddToCart()
+  {
+    const obj = {
+      Name:props.title,
+      Img:props.Imgurl,
+      Price:props.price
+    }
+    
+    cartctx.AddToCart(obj);
+     
+  }
   return (
 
      <div className="col d-flex justify-content-center">
@@ -11,7 +25,7 @@ function Album(props) {
       <Card.Title className='fs-2'>{props.title}</Card.Title>
       <Container fluid className='d-flex justify-content-between mt-2 mb-2'>
        <p>{props.price}</p>
-      <Button variant="primary">Add To Cart</Button>
+      <Button onClick={AddToCart} variant="primary">Add To Cart</Button>
       </Container>
     </Card.Body>
   </Card>

@@ -1,0 +1,67 @@
+
+.OrderModalItem{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(12, 98, 179, 0.925);
+    padding: 0.5rem 0;
+}
+
+.Img_Price_Name{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+.Img_Price_Name img{
+    border-radius: 10px;
+    margin: 0 1.5rem 0 0 ;
+}
+.ModalItem_details{
+     width: 11rem;
+    font-family: 'Roboto' ,sans-serif;
+  
+}
+.ModalItem_details h2{
+    margin: 2px 0;
+     font-weight: 700;
+     font-size: 1.5rem;
+     color:  rgb(31, 31, 31);
+}
+
+.Price_Quantity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Price_Quantity .price{
+     margin-bottom: 10px;
+     color: rgba(12, 98, 179, 0.925);
+     font-weight: 700;
+}
+.Price_Quantity .quantity{
+     margin-bottom: 10px;
+     border: 1px solid rgb(134, 134, 134);
+     padding: 7px 10px;
+     border-radius: 6px;   
+}
+.Increase_Decrease_btns {
+     width: auto;
+}
+.Increase_Decrease_btns button{
+    border-style: none;
+      margin: 0 5px;
+      border:  none;
+      background-color: red;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+}
+
+.Increase_Decrease_btns .increase{
+    background-color: rgb(138, 4, 4);
+    color: white;
+}

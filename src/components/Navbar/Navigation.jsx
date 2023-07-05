@@ -2,16 +2,19 @@ import Container from 'react-bootstrap/Container';
 import {Row,Col} from 'react-bootstrap';
 import Cart from '../Cart/Cart';
 import CartComponent from '../Cart/CartComponent';
-import { useState } from 'react';
+import { useState,useContext } from 'react';
+import CartContext from '../../Context/CartContext';
 
 import "./Navigation.css"
 function Navigation() {
 
   const [showCart,setshowCart] = useState(false);
+  const cartctx = useContext(CartContext);
 
     function handleCart()
    {
       setshowCart(prev=>!prev);
+      console.log(cartctx)
    }
 
   return (
