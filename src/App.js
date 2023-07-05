@@ -1,17 +1,19 @@
  
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigation from './components/Navbar/Navigation';
-import Music from './components/Music/Music';
-import CartProvider from './Context/CartProvider';
+import Store from './pages/Store';
+import About from './pages/About';
+import { Router, Routes,Route } from 'react-router-dom';
 
 function App() {
   return (
-    <CartProvider>
-      <Navigation />
-      <Music />
-    </CartProvider>
-    
+   <>
+   <Routes>
+    <Route path='/' element={<Store/>} />
+   
+    <Route path='/About'  element={<About/>} />
+   </Routes>
+   </>
   );
 }
 
