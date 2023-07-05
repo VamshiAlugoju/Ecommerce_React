@@ -1,10 +1,11 @@
 import Container from 'react-bootstrap/Container';
 import {Row,Col} from 'react-bootstrap';
-import { useState,useContext } from 'react';
+
  import {Link} from "react-router-dom"
 
-import "./Navigation.css"
-function AboutNav(props) {
+import "./Navigation.css";
+
+function ContactNav(props) {
 
   return (
     <>  
@@ -12,7 +13,7 @@ function AboutNav(props) {
         <Row>
         <Container className='fs-1'>
              <ul className='Nav_UL'>
-              <li> <Link to="/Home" >Home </Link> </li>
+              <li><Link to="/Home" >Home </Link> </li>
               <li> <Link to="/" >Store </Link> </li>
               <li> <Link to="/About" >About </Link> </li>
               <li> <Link to="/Contact" >Contact Us </Link> </li>
@@ -20,12 +21,10 @@ function AboutNav(props) {
         </Container>
         </Row>
         </Container>
-    <Container   fluid style={{color:"white",height:"200px" }} className={'bg-secondary text-center'} >
-       <h1 className='generic_logo'>The Generics</h1>
-        </Container>
+ 
   
     </>
   );
 }
 
-export default AboutNav;
+export default ContactNav;
