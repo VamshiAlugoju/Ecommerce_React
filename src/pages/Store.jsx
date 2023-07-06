@@ -5,13 +5,12 @@ import CartProvider from '../Context/CartProvider'
  
 
 function Store(){
- 
-  
   return (
-    <CartProvider>
+   <>
     <Navigation   />
     <Music />
-  </CartProvider>
+   </>
+   
   )
 }
 

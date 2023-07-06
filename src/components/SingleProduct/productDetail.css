@@ -1,0 +1,20 @@
+
+.Product_Detail_div{
+    border: 1px solid rgb(80, 80, 80);
+    position: relative;
+    left: 25%;
+     width: 50rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    height: 80vh;
+}
+
+.Product_img_div img{
+    border-radius: 10px;
+}
+
+.reviews_div{
+    text-align: left;
+}

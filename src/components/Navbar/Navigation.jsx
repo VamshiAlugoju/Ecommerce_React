@@ -5,6 +5,7 @@ import CartComponent from '../Cart/CartComponent';
 import { useState,useContext } from 'react';
 import CartContext from '../../Context/CartContext';
 import { Link } from 'react-router-dom';
+import Login from '../Auth/Login';
 
 import "./Navigation.css"
 function Navigation(props) {
@@ -30,13 +31,14 @@ function Navigation(props) {
               <li> <Link to="/" >Store </Link> </li>
               <li> <Link to="/About" >About </Link> </li>
               <li> <Link to="/Contact" >Contact Us </Link> </li>
+              { !cartctx.isLoggedin && <li> <Link to="/Login" >Login</Link> </li>}
              </ul>
         </Container>
         </Col>
         <Col className='d-flex align-items-center'>
-        <Container>
-          <Cart onClick={handleCart} />
-          
+        <Container className='d-flex justify-content-between'>
+         {cartctx.isLoggedin && <Cart onClick={handleCart} />}
+         {cartctx.isLoggedin && <Login  />}
         </Container>
         </Col>
         </Row>
@@ -44,6 +46,7 @@ function Navigation(props) {
     <Container   fluid style={{color:"white",height:"200px" }} className={'bg-secondary text-center'} >
        <h1 className='generic_logo'>The Generics</h1>
        {showCart && <CartComponent closeModal={handleCart}/>}
+        
         </Container>
   
     </>

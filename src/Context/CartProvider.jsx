@@ -3,7 +3,8 @@ import CartContext from "./CartContext";
 
 const initialData = {
     cartItems : [],
-    totalPrice:0
+    totalPrice:0,
+    isLoggedin:false
 }
 
 function Reducer(state,action)
@@ -15,8 +16,26 @@ function Reducer(state,action)
        updatedCartItems.push(action.item);
        return{
         cartItems:updatedCartItems,
-        totalPrice:updatedPrice
+        totalPrice:updatedPrice,
+        isLoggedin:state.isLoggedin
        }
+    }
+
+    if(action.type === "LOGIN")
+    {
+        return{
+            cartItems:state.cartItems,
+            totalPrice:state.totalPrice,
+            isLoggedin:true
+        }
+    }
+    if(action.type === "LOGOUT")
+    {
+        return{
+            cartItems:state.cartItems,
+            totalPrice:state.totalPrice,
+            isLoggedin:false
+        }
     }
   
     return initialData;
@@ -26,16 +45,31 @@ function Reducer(state,action)
 function CartProvider(props)
 {
     const [state,dispatchaction] = React.useReducer(Reducer,initialData)
-     
+ 
     function AddToCart(item)
     {
         dispatchaction({type:"ADDTOCART" , item})
-       console.log(state)
+      
     }
+
+    function login()
+    { 
+         dispatchaction({type:"LOGIN"})
+    }
+    function logout()
+    {  
+        dispatchaction({type:"LOGOUT"})
+    }
+  
+    console.log(state)
+
     const cartContext = {
         Items:state.cartItems,
         TotalPrice:state.totalPrice,
-        AddToCart:AddToCart
+        isLoggedin:state.isLoggedin,
+        AddToCart:AddToCart,
+        login:login,
+        logout:logout
     }
 
     return <CartContext.Provider value={cartContext}>

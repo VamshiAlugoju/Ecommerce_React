@@ -2,10 +2,12 @@ import Container from 'react-bootstrap/Container';
 import {Row,Col} from 'react-bootstrap';
 import { useState,useContext } from 'react';
  import {Link} from "react-router-dom"
-
+ import CartContext from '../../Context/CartContext';
+import React from 'react';
 import "./Navigation.css"
-function AboutNav(props) {
 
+function AboutNav(props) {
+  const cartctx = React.useContext(CartContext);
   return (
     <>  
     <Container fluid bg={'black'} style={{color:"white"}} className={'bg-dark color-success  sticky-top'} >
@@ -16,6 +18,7 @@ function AboutNav(props) {
               <li> <Link to="/" >Store </Link> </li>
               <li> <Link to="/About" >About </Link> </li>
               <li> <Link to="/Contact" >Contact Us </Link> </li>
+              { !cartctx.isLoggedin && <li> <Link to="/Login" >Login</Link> </li>}
              </ul>
         </Container>
         </Row>

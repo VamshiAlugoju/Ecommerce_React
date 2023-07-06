@@ -16,6 +16,7 @@ function Music() {
          title={item.title}
          price={item.price}
          Imgurl={item.imageUrl}
+         id={item.id}
           />
         })}
     </Container>
